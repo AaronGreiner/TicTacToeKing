@@ -15,6 +15,7 @@ namespace TicTacToe
         public Frame()
         {
             InitializeComponent();
+            CenterToScreen();
         }
     }
 }

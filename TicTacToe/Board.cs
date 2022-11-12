@@ -41,6 +41,13 @@ namespace TicTacToe
             }
         }
 
+        private void ResetBoard()
+        {
+            InitBoard();
+            is_cross_turn = true;
+            Invalidate();
+        }
+
         private void Board_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
@@ -72,7 +79,50 @@ namespace TicTacToe
                 current_square.SetOccupied(true, is_cross_turn);
                 is_cross_turn = !is_cross_turn;
                 Invalidate();
+
+                if (CheckEndCondition())
+                {
+                    ResetBoard();
+                }
             }
+        }
+
+        private bool CheckEndCondition()
+        {
+            if (CheckWin())
+            {
+                MessageBox.Show(is_cross_turn ? "Kreis hat gewonnen!" : "Kreuz hat gewonnen!", "Spiel vorbei!");
+                return true;
+            }
+
+            if (CheckTie())
+            {
+                MessageBox.Show("Unentschieden!", "Spiel vorbei!");
+                return true;
+            }
+
+            return false;
+        }
+
+        private bool CheckWin()
+        {
+            return false;
+        }
+
+        private bool CheckTie()
+        {
+            bool all_occupied = true;
+
+            foreach (Square square in squares)
+            {
+                if (!square.is_occupied)
+                {
+                    all_occupied = false;
+                    break;
+                }
+            }
+
+            return all_occupied;
         }
 
         private Square GetSquareFromPos(Point pos)
