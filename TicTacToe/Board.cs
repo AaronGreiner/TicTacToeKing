@@ -106,6 +106,27 @@ namespace TicTacToe
 
         private bool CheckWin()
         {
+            if (squares[0, 0].is_occupied && squares[1, 0].is_occupied && squares[2, 0].is_occupied)
+            {
+                if ((squares[0, 0].is_cross && squares[1, 0].is_cross && squares[2, 0].is_cross) ||
+                (!squares[0, 0].is_cross && !squares[1, 0].is_cross && !squares[2, 0].is_cross))
+                {
+                    return true;
+                }
+            }
+
+
+            //if (squares[0,0].is_occupied && squares[1, 0].is_occupied && squares[2,0].is_occupied &&
+            //    (squares[0, 0].is_cross && squares[1, 0].is_cross && squares[2, 0].is_cross) ||
+            //    (!squares[0, 0].is_cross && !squares[1, 0].is_cross && !squares[2, 0].is_cross))
+            //{
+            //    return true;
+            //}
+
+
+
+
+
             return false;
         }
 
