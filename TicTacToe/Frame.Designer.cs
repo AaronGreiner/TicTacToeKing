@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.board1 = new TicTacToe.Board();
+            this.board1 = new TicTacToe.BoardTest();
             this.SuspendLayout();
             // 
             // board1
@@ -57,7 +57,7 @@
 
         #endregion
 
-        private Board board1;
+        private BoardTest board1;
     }
 }
 

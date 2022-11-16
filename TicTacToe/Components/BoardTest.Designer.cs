@@ -1,6 +1,6 @@
 ﻿namespace TicTacToe
 {
-    partial class Board
+    partial class BoardTest
     {
         /// <summary> 
         /// Erforderliche Designervariable.
