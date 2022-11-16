@@ -1,6 +1,6 @@
-﻿namespace TicTacToe
+﻿namespace TicTacToe.Components.basic
 {
-    partial class BoardTest
+    partial class GameBoard
     {
         /// <summary> 
         /// Erforderliche Designervariable.
@@ -30,17 +30,17 @@
         {
             this.SuspendLayout();
             // 
-            // Board
+            // GameBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.DoubleBuffered = true;
             this.MaximumSize = new System.Drawing.Size(300, 300);
             this.MinimumSize = new System.Drawing.Size(300, 300);
-            this.Name = "Board";
+            this.Name = "GameBoard";
             this.Size = new System.Drawing.Size(300, 300);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Board_Paint);
-            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Board_MouseClick);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.GameBoard_Paint);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.GameBoard_MouseClick);
             this.ResumeLayout(false);
 
         }

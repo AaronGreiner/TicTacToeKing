@@ -1,6 +1,6 @@
 ﻿namespace TicTacToe
 {
-    partial class Frame
+    partial class MainFrame
     {
         /// <summary>
         /// Erforderliche Designervariable.
@@ -20,7 +20,7 @@
             base.Dispose(disposing);
         }
 
-        #region Vom Windows Form-Designer generierter Code
+        #region Windows Form Designer generated code
 
         /// <summary>
         /// Erforderliche Methode für die Designerunterstützung.
@@ -28,36 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.board1 = new TicTacToe.BoardTest();
+            this.board = new TicTacToe.Components.basic.GameBoard();
             this.SuspendLayout();
             // 
-            // board1
+            // board
             // 
-            this.board1.Location = new System.Drawing.Point(3, 0);
-            this.board1.MaximumSize = new System.Drawing.Size(300, 300);
-            this.board1.MinimumSize = new System.Drawing.Size(300, 300);
-            this.board1.Name = "board1";
-            this.board1.Size = new System.Drawing.Size(300, 300);
-            this.board1.TabIndex = 0;
+            this.board.Location = new System.Drawing.Point(3, 0);
+            this.board.MaximumSize = new System.Drawing.Size(300, 300);
+            this.board.MinimumSize = new System.Drawing.Size(300, 300);
+            this.board.Name = "board";
+            this.board.Size = new System.Drawing.Size(300, 300);
+            this.board.TabIndex = 0;
             // 
-            // Frame
+            // MainFrame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(416, 389);
-            this.Controls.Add(this.board1);
+            this.ClientSize = new System.Drawing.Size(484, 461);
+            this.Controls.Add(this.board);
             this.MaximizeBox = false;
-            this.Name = "Frame";
-            this.Text = "Test";
+            this.Name = "MainFrame";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private BoardTest board1;
+        private Components.basic.GameBoard board;
     }
 }
-

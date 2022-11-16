@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace TicTacToe
+namespace TicTacToe.Classes
 {
     internal class Square
     {
