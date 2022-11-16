@@ -53,6 +53,12 @@
     <Compile Include="Components\basic\GameBoard.Designer.cs">
       <DependentUpon>GameBoard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Components\MainControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\MainControl.Designer.cs">
+      <DependentUpon>MainControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Enums\GameState.cs" />
     <Compile Include="Enums\Player.cs" />
     <Compile Include="MainFrame.cs">
@@ -66,6 +72,9 @@
     <Compile Include="Classes\Square.cs" />
     <EmbeddedResource Include="Components\basic\GameBoard.resx">
       <DependentUpon>GameBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\MainControl.resx">
+      <DependentUpon>MainControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainFrame.resx">
       <DependentUpon>MainFrame.cs</DependentUpon>
