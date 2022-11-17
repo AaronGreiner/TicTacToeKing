@@ -1,6 +1,6 @@
-﻿namespace TicTacToe.Components.Basic
+﻿namespace TicTacToe.Components.Controls
 {
-    partial class GameBoard
+    partial class SingleplayerControl
     {
         /// <summary> 
         /// Erforderliche Designervariable.
@@ -28,23 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.gameBoard1 = new TicTacToe.Components.Basic.GameBoard();
             this.SuspendLayout();
             // 
-            // GameBoard
+            // gameBoard1
+            // 
+            this.gameBoard1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.gameBoard1.Location = new System.Drawing.Point(0, 0);
+            this.gameBoard1.MaximumSize = new System.Drawing.Size(300, 300);
+            this.gameBoard1.MinimumSize = new System.Drawing.Size(300, 300);
+            this.gameBoard1.Name = "gameBoard1";
+            this.gameBoard1.Size = new System.Drawing.Size(300, 300);
+            this.gameBoard1.TabIndex = 0;
+            // 
+            // SingleplayerControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.DoubleBuffered = true;
-            this.MaximumSize = new System.Drawing.Size(300, 300);
-            this.MinimumSize = new System.Drawing.Size(300, 300);
-            this.Name = "GameBoard";
+            this.Controls.Add(this.gameBoard1);
+            this.Name = "SingleplayerControl";
             this.Size = new System.Drawing.Size(300, 300);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.GameBoard_Paint);
-            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.GameBoard_MouseClick);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private Basic.GameBoard gameBoard1;
     }
 }

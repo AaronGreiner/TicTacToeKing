@@ -28,36 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.board = new TicTacToe.Components.basic.GameBoard();
+            this.panelPlaceholder = new System.Windows.Forms.Panel();
+            this.buttonMenu = new TicTacToe.Components.Buttons.ButtonSmall();
             this.SuspendLayout();
             // 
-            // board
+            // panelPlaceholder
             // 
-            this.board.Location = new System.Drawing.Point(3, 0);
-            this.board.MaximumSize = new System.Drawing.Size(300, 300);
-            this.board.MinimumSize = new System.Drawing.Size(300, 300);
-            this.board.Name = "board";
-            this.board.Size = new System.Drawing.Size(300, 300);
-            this.board.TabIndex = 0;
+            this.panelPlaceholder.Location = new System.Drawing.Point(0, 39);
+            this.panelPlaceholder.Name = "panelPlaceholder";
+            this.panelPlaceholder.Size = new System.Drawing.Size(584, 382);
+            this.panelPlaceholder.TabIndex = 3;
+            // 
+            // buttonMenu
+            // 
+            this.buttonMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonMenu.Image = global::TicTacToe.Properties.Resources.menu;
+            this.buttonMenu.Location = new System.Drawing.Point(4, 4);
+            this.buttonMenu.Name = "buttonMenu";
+            this.buttonMenu.Size = new System.Drawing.Size(30, 30);
+            this.buttonMenu.TabIndex = 0;
+            this.buttonMenu.TabStop = false;
+            this.buttonMenu.UseVisualStyleBackColor = true;
+            this.buttonMenu.Click += new System.EventHandler(this.buttonMenu_Click);
             // 
             // MainFrame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(867, 461);
-            this.Controls.Add(this.board);
+            this.ClientSize = new System.Drawing.Size(584, 421);
+            this.Controls.Add(this.panelPlaceholder);
+            this.Controls.Add(this.buttonMenu);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(600, 460);
+            this.MinimumSize = new System.Drawing.Size(600, 460);
             this.Name = "MainFrame";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.MainFrame_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Components.basic.GameBoard board;
+        private Components.Buttons.ButtonSmall buttonMenu;
+        private System.Windows.Forms.Panel panelPlaceholder;
     }
 }

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TicTacToe.Classes;
 
-namespace TicTacToe.Components.basic
+namespace TicTacToe.Components.Basic
 {
     public partial class GameBoard : UserControl
     {

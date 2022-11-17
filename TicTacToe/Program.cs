@@ -5,15 +5,14 @@ namespace TicTacToe
 {
     internal static class Program
     {
-        /// <summary>
-        /// Der Haupteinstiegspunkt für die Anwendung.
-        /// </summary>
+        public static MainFrame MainApplicationFrame;
+
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainFrame());
+            Application.Run(MainApplicationFrame = new MainFrame());
         }
     }
 }
