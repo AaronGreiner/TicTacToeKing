@@ -59,6 +59,12 @@
     <Compile Include="Components\Buttons\ButtonMedium.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Components\Controls\MultiplayerLocalControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Controls\MultiplayerLocalControl.Designer.cs">
+      <DependentUpon>MultiplayerLocalControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Components\Controls\SingleplayerDifficultyControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -91,6 +97,9 @@
     <Compile Include="Classes\Square.cs" />
     <EmbeddedResource Include="Components\Basic\GameBoard.resx">
       <DependentUpon>GameBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Controls\MultiplayerLocalControl.resx">
+      <DependentUpon>MultiplayerLocalControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\Controls\SingleplayerDifficultyControl.resx">
       <DependentUpon>SingleplayerDifficultyControl.cs</DependentUpon>

@@ -16,7 +16,7 @@ namespace TicTacToe.Components.Controls
 
         private void buttonMultiplayerLocal_Click(object sender, System.EventArgs e)
         {
-
+            Program.MainApplicationFrame.LoadMultiplayerLocal();
         }
 
         private void buttonMultiplayerSocket_Click(object sender, System.EventArgs e)
