@@ -4,9 +4,10 @@ namespace TicTacToe.Components.Controls
 {
     public partial class SingleplayerControl : UserControl
     {
-        public SingleplayerControl()
+        public SingleplayerControl(SingleplayerDifficulty difficulty)
         {
             InitializeComponent();
+            gameBoard.SetLockedPlayer(Player.Circle);
         }
     }
 }

@@ -6,6 +6,7 @@ namespace TicTacToe.Classes
     {
         public Square[] squares = new Square[9];
         public Player current_player;
+        public Player locked_player;
 
         public GameState current_state;
         public Player winning_player;
@@ -18,6 +19,7 @@ namespace TicTacToe.Classes
         {
             InitSquares();
             current_player = Player.Cross;
+            locked_player = Player.None;
             current_state = GameState.Running;
         }
 
@@ -42,12 +44,16 @@ namespace TicTacToe.Classes
 
         public bool UpdateSquare(Point pos)
         {
-            foreach (Square square in squares)
+            if (locked_player != current_player)
             {
-                if (!square.is_occupied && square.pos == pos)
+
+                foreach (Square square in squares)
                 {
-                    square.SetOccupied(current_player);
-                    return true;
+                    if (!square.is_occupied && square.pos == pos)
+                    {
+                        square.SetOccupied(current_player);
+                        return true;
+                    }
                 }
             }
 

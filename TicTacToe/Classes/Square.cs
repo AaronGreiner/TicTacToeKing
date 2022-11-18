@@ -17,6 +17,7 @@ namespace TicTacToe.Classes
         {
             this.pos = pos;
             is_occupied = false;
+            owner = Player.None;
         }
 
         public void SetOccupied(Player player)

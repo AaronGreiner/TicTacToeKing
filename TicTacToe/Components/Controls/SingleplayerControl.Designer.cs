@@ -28,24 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gameBoard1 = new TicTacToe.Components.Basic.GameBoard();
+            this.gameBoard = new TicTacToe.Components.Basic.GameBoard();
             this.SuspendLayout();
             // 
-            // gameBoard1
+            // gameBoard
             // 
-            this.gameBoard1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.gameBoard1.Location = new System.Drawing.Point(0, 0);
-            this.gameBoard1.MaximumSize = new System.Drawing.Size(300, 300);
-            this.gameBoard1.MinimumSize = new System.Drawing.Size(300, 300);
-            this.gameBoard1.Name = "gameBoard1";
-            this.gameBoard1.Size = new System.Drawing.Size(300, 300);
-            this.gameBoard1.TabIndex = 0;
+            this.gameBoard.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.gameBoard.Location = new System.Drawing.Point(0, 0);
+            this.gameBoard.MaximumSize = new System.Drawing.Size(300, 300);
+            this.gameBoard.MinimumSize = new System.Drawing.Size(300, 300);
+            this.gameBoard.Name = "gameBoard";
+            this.gameBoard.Size = new System.Drawing.Size(300, 300);
+            this.gameBoard.TabIndex = 0;
             // 
             // SingleplayerControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.gameBoard1);
+            this.Controls.Add(this.gameBoard);
             this.Name = "SingleplayerControl";
             this.Size = new System.Drawing.Size(300, 300);
             this.ResumeLayout(false);
@@ -54,6 +54,6 @@
 
         #endregion
 
-        private Basic.GameBoard gameBoard1;
+        private Basic.GameBoard gameBoard;
     }
 }

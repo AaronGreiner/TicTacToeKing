@@ -9,6 +9,7 @@ namespace TicTacToe
 
         private UserControl main_control;
         private UserControl singleplayer_control;
+        private UserControl singleplayer_difficulty_control;
         private UserControl multiplayer_socket_control;
         private UserControl multiplayer_local_control;
 
@@ -33,12 +34,22 @@ namespace TicTacToe
             main_control.BringToFront();
         }
 
-        public void LoadSingleplayer()
+        public void LoadSingleplayerDifficulty()
         {
-            if (singleplayer_control == null)
+            if (singleplayer_difficulty_control == null)
             {
-                singleplayer_control = new SingleplayerControl();
+                singleplayer_difficulty_control = new SingleplayerDifficultyControl();
             }
+
+            panelPlaceholder.Controls.Remove(current_control);
+            singleplayer_difficulty_control.Dock = DockStyle.Fill;
+            panelPlaceholder.Controls.Add(singleplayer_difficulty_control);
+            singleplayer_difficulty_control.BringToFront();
+        }
+
+        public void LoadSingleplayer(SingleplayerDifficulty difficulty)
+        {
+            singleplayer_control = new SingleplayerControl(difficulty);
 
             panelPlaceholder.Controls.Remove(current_control);
             singleplayer_control.Dock = DockStyle.Fill;

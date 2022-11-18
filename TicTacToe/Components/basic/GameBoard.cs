@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
+﻿using System.Drawing;
 using System.Drawing.Drawing2D;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TicTacToe.Classes;
 
@@ -21,6 +14,11 @@ namespace TicTacToe.Components.Basic
         {
             InitializeComponent();
             game.Start();
+        }
+
+        public void SetLockedPlayer(Player locked_player)
+        {
+            game.locked_player = locked_player;
         }
 
         private void GameBoard_Paint(object sender, PaintEventArgs e)

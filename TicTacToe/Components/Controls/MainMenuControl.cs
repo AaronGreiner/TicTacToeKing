@@ -11,7 +11,7 @@ namespace TicTacToe.Components.Controls
 
         private void buttonSingleplayer_Click(object sender, System.EventArgs e)
         {
-            Program.MainApplicationFrame.LoadSingleplayer();
+            Program.MainApplicationFrame.LoadSingleplayerDifficulty();
         }
 
         private void buttonMultiplayerLocal_Click(object sender, System.EventArgs e)
