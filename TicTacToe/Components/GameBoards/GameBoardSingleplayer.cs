@@ -1,13 +1,23 @@
-﻿using System;
-using System.Windows.Forms;
+﻿using System.Threading;
+using TicTacToe.Classes;
 
 namespace TicTacToe.Components.GameBoards
 {
-    internal class GameBoardSingleplayer : GameBoard
+    public class GameBoardSingleplayer : GameBoard
     {
+        ComputerAI com;
+
         internal override void ProcessMove()
         {
-            MessageBox.Show("Process Move Singleplayer - TBC");
+            Refresh();
+            Thread.Sleep(100);
+            com.DoMove(game);
+            UpdateBoard(false);
+        }
+
+        internal override void SetDifficulty(SingleplayerDifficulty difficulty)
+        {
+            com = new ComputerAI(difficulty);
         }
     }
 }

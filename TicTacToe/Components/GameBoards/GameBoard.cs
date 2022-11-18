@@ -49,32 +49,41 @@ namespace TicTacToe.Components.GameBoards
 
         private void GameBoard_MouseClick(object sender, MouseEventArgs e)
         {
-            if (game.UpdateSquare(new Point(e.X / 100, e.Y / 100)))
+            if (game.UpdateSquare(new Point(e.X / 100, e.Y / 100), false))
             {
-                Invalidate();
-
-                switch (game.CheckGameState())
-                {
-                    case GameState.Running:
-                        game.SwitchPlayer();
-                        ProcessMove();
-                        break;
-                    case GameState.WinLose:
-                        MessageBox.Show("The Winner is " + game.winning_player);
-                        game.Start();
-                        break;
-                    case GameState.Tie:
-                        MessageBox.Show("Tie");
-                        game.Start();
-                        break;
-                    default:
-                        break;
-                }
-
-                Invalidate();
+                UpdateBoard(true);
             }
         }
 
-        abstract internal void ProcessMove();
+        internal void UpdateBoard(bool do_process)
+        {
+            Invalidate();
+
+            switch (game.CheckGameState())
+            {
+                case GameState.Running:
+                    game.SwitchPlayer();
+                    if (do_process)
+                    {
+                        ProcessMove();
+                    }
+                    break;
+                case GameState.WinLose:
+                    MessageBox.Show("The Winner is " + game.winning_player);
+                    game.Start();
+                    break;
+                case GameState.Tie:
+                    MessageBox.Show("Tie");
+                    game.Start();
+                    break;
+                default:
+                    break;
+            }
+
+            Invalidate();
+        }
+
+        internal abstract void ProcessMove();
+        internal abstract void SetDifficulty(SingleplayerDifficulty difficulty);
     }
 }

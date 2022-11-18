@@ -42,11 +42,10 @@ namespace TicTacToe.Classes
             }
         }
 
-        public bool UpdateSquare(Point pos)
+        public bool UpdateSquare(Point pos, bool ignore_locked)
         {
-            if (locked_player != current_player)
+            if (ignore_locked || locked_player != current_player)
             {
-
                 foreach (Square square in squares)
                 {
                     if (!square.is_occupied && square.pos == pos)

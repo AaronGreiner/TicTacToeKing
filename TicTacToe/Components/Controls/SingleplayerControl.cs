@@ -8,6 +8,7 @@ namespace TicTacToe.Components.Controls
         {
             InitializeComponent();
             gameBoard.SetLockedPlayer(Player.Circle);
+            gameBoard.SetDifficulty(difficulty);
         }
     }
 }

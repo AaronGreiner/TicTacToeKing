@@ -13,5 +13,10 @@ namespace TicTacToe.Components.GameBoards
         {
             
         }
+
+        internal override void SetDifficulty(SingleplayerDifficulty difficulty)
+        {
+            
+        }
     }
 }

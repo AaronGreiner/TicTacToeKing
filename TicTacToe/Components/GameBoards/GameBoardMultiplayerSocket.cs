@@ -13,5 +13,10 @@ namespace TicTacToe.Components.GameBoards
         {
             MessageBox.Show("Process Move Multiplayer Socket - TBC");
         }
+
+        internal override void SetDifficulty(SingleplayerDifficulty difficulty)
+        {
+            
+        }
     }
 }
