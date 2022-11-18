@@ -1,4 +1,4 @@
-﻿namespace TicTacToe.Components.Basic
+﻿namespace TicTacToe.Components.GameBoards
 {
     partial class GameBoard
     {

@@ -3,12 +3,12 @@ using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 using TicTacToe.Classes;
 
-namespace TicTacToe.Components.Basic
+namespace TicTacToe.Components.GameBoards
 {
-    public partial class GameBoard : UserControl
+    public abstract partial class GameBoard : UserControl
     {
         public bool draw_debug_info = false;
-        private Game game = new Game();
+        internal Game game = new Game();
 
         public GameBoard()
         {
@@ -57,6 +57,7 @@ namespace TicTacToe.Components.Basic
                 {
                     case GameState.Running:
                         game.SwitchPlayer();
+                        ProcessMove();
                         break;
                     case GameState.WinLose:
                         MessageBox.Show("The Winner is " + game.winning_player);
@@ -73,7 +74,7 @@ namespace TicTacToe.Components.Basic
                 Invalidate();
             }
         }
+
+        abstract internal void ProcessMove();
     }
-
-
 }

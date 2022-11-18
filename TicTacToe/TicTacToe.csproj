@@ -47,10 +47,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Game.cs" />
-    <Compile Include="Components\Basic\GameBoard.cs">
+    <Compile Include="Components\Controls\MultiplayerSocketControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Components\Basic\GameBoard.Designer.cs">
+    <Compile Include="Components\Controls\MultiplayerSocketControl.Designer.cs">
+      <DependentUpon>MultiplayerSocketControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\GameBoards\GameBoard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\GameBoards\GameBoard.Designer.cs">
       <DependentUpon>GameBoard.cs</DependentUpon>
     </Compile>
     <Compile Include="Components\Buttons\ButtonSmall.cs">
@@ -83,6 +89,15 @@
     <Compile Include="Components\Controls\MainMenuControl.Designer.cs">
       <DependentUpon>MainMenuControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Components\GameBoards\GameBoardMultiplayerSocket.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\GameBoards\GameBoardMultiplayerLocal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\GameBoards\GameBoardSingleplayer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Enums\GameState.cs" />
     <Compile Include="Enums\SingleplayerDifficulty.cs" />
     <Compile Include="Enums\Player.cs" />
@@ -95,7 +110,10 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Classes\Square.cs" />
-    <EmbeddedResource Include="Components\Basic\GameBoard.resx">
+    <EmbeddedResource Include="Components\Controls\MultiplayerSocketControl.resx">
+      <DependentUpon>MultiplayerSocketControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\GameBoards\GameBoard.resx">
       <DependentUpon>GameBoard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\Controls\MultiplayerLocalControl.resx">

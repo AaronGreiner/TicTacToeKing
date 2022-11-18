@@ -67,6 +67,14 @@ namespace TicTacToe
             multiplayer_local_control.BringToFront();
         }
 
+        public void LoadMultiplayerSocket()
+        {
+            multiplayer_socket_control = new MultiplayerSocketControl();
 
+            panelPlaceholder.Controls.Remove(current_control);
+            multiplayer_socket_control.Dock = DockStyle.Fill;
+            panelPlaceholder.Controls.Add(multiplayer_socket_control);
+            multiplayer_socket_control.BringToFront();
+        }
     }
 }

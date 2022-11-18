@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gameBoard = new TicTacToe.Components.Basic.GameBoard();
+            this.gameBoard = new TicTacToe.Components.GameBoards.GameBoardMultiplayerLocal();
             this.SuspendLayout();
             // 
             // gameBoard
@@ -54,6 +54,6 @@
 
         #endregion
 
-        private Basic.GameBoard gameBoard;
+        private GameBoards.GameBoard gameBoard;
     }
 }

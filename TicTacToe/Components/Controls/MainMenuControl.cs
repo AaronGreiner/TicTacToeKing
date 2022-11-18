@@ -21,7 +21,7 @@ namespace TicTacToe.Components.Controls
 
         private void buttonMultiplayerSocket_Click(object sender, System.EventArgs e)
         {
-
+            Program.MainApplicationFrame.LoadMultiplayerSocket();
         }
     }
 }

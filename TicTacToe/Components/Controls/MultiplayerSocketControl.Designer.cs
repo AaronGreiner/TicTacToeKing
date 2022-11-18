@@ -1,6 +1,6 @@
 ﻿namespace TicTacToe.Components.Controls
 {
-    partial class SingleplayerControl
+    partial class MultiplayerSocketControl
     {
         /// <summary> 
         /// Erforderliche Designervariable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gameBoard = new TicTacToe.Components.GameBoards.GameBoardSingleplayer();
+            this.gameBoard = new TicTacToe.Components.GameBoards.GameBoardMultiplayerSocket();
             this.SuspendLayout();
             // 
             // gameBoard
