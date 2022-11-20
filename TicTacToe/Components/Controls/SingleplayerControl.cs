@@ -10,5 +10,10 @@ namespace TicTacToe.Components.Controls
             gameBoard.SetLockedPlayer(Player.Circle);
             gameBoard.SetDifficulty(difficulty);
         }
+
+        public void SetPlayer(Player start_player)
+        {
+            gameBoard.SetPlayer(start_player);
+        }
     }
 }

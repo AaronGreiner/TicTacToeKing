@@ -28,10 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.groupBox = new System.Windows.Forms.GroupBox();
+            this.radioButtonSelectCom = new TicTacToe.Components.Buttons.RadioButtonSelect();
+            this.radioButtonSelectUser = new TicTacToe.Components.Buttons.RadioButtonSelect();
             this.buttonHard = new TicTacToe.Components.Buttons.ButtonMedium();
             this.buttonMedium = new TicTacToe.Components.Buttons.ButtonMedium();
             this.buttonEasy = new TicTacToe.Components.Buttons.ButtonMedium();
+            this.groupBox.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // groupBox
+            // 
+            this.groupBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox.Controls.Add(this.radioButtonSelectCom);
+            this.groupBox.Controls.Add(this.radioButtonSelectUser);
+            this.groupBox.Location = new System.Drawing.Point(240, 209);
+            this.groupBox.Name = "groupBox";
+            this.groupBox.Size = new System.Drawing.Size(102, 48);
+            this.groupBox.TabIndex = 3;
+            this.groupBox.TabStop = false;
+            this.groupBox.Text = "First Turn";
+            // 
+            // radioButtonSelectCom
+            // 
+            this.radioButtonSelectCom.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.radioButtonSelectCom.Image = global::TicTacToe.Properties.Resources.com;
+            this.radioButtonSelectCom.Location = new System.Drawing.Point(54, 13);
+            this.radioButtonSelectCom.Name = "radioButtonSelectCom";
+            this.radioButtonSelectCom.Size = new System.Drawing.Size(42, 30);
+            this.radioButtonSelectCom.TabIndex = 1;
+            this.radioButtonSelectCom.UseVisualStyleBackColor = true;
+            this.radioButtonSelectCom.CheckedChanged += new System.EventHandler(this.radioButtonSelectCom_CheckedChanged);
+            // 
+            // radioButtonSelectUser
+            // 
+            this.radioButtonSelectUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.radioButtonSelectUser.Image = global::TicTacToe.Properties.Resources.user;
+            this.radioButtonSelectUser.Location = new System.Drawing.Point(6, 13);
+            this.radioButtonSelectUser.Name = "radioButtonSelectUser";
+            this.radioButtonSelectUser.Size = new System.Drawing.Size(42, 30);
+            this.radioButtonSelectUser.TabIndex = 0;
+            this.radioButtonSelectUser.UseVisualStyleBackColor = true;
+            this.radioButtonSelectUser.CheckedChanged += new System.EventHandler(this.radioButtonSelectUser_CheckedChanged);
             // 
             // buttonHard
             // 
@@ -79,11 +117,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.groupBox);
             this.Controls.Add(this.buttonHard);
             this.Controls.Add(this.buttonMedium);
             this.Controls.Add(this.buttonEasy);
             this.Name = "SingleplayerDifficultyControl";
             this.Size = new System.Drawing.Size(584, 373);
+            this.groupBox.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -93,5 +133,8 @@
         private Buttons.ButtonMedium buttonEasy;
         private Buttons.ButtonMedium buttonMedium;
         private Buttons.ButtonMedium buttonHard;
+        private System.Windows.Forms.GroupBox groupBox;
+        private Buttons.RadioButtonSelect radioButtonSelectCom;
+        private Buttons.RadioButtonSelect radioButtonSelectUser;
     }
 }

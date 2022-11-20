@@ -83,6 +83,18 @@ namespace TicTacToe.Components.GameBoards
             Invalidate();
         }
 
+        internal void SetPlayer(Player start_player)
+        {
+            Refresh();
+            game.Restart(start_player);
+            Refresh();
+
+            if(start_player == Player.Circle)
+            {
+                ProcessMove();
+            }
+        }
+
         internal abstract void ProcessMove();
         internal abstract void SetDifficulty(SingleplayerDifficulty difficulty);
     }

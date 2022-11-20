@@ -24,6 +24,14 @@ namespace TicTacToe.Classes
             current_state = GameState.Running;
         }
 
+        public void Restart(Player start_player)
+        {
+            InitSquares();
+            current_player = start_player;
+            locked_player = Player.None;
+            current_state = GameState.Running;
+        }
+
         private void InitSquares()
         {
             int x = 0;
@@ -65,7 +73,6 @@ namespace TicTacToe.Classes
             if (current_player == Player.Circle)
             {
                 current_player = Player.Cross;
-
             }
             else
             {
@@ -78,7 +85,6 @@ namespace TicTacToe.Classes
             if (CheckWinLose())
             {
                 current_state = GameState.WinLose;
-
             }
             else if (CheckTie())
             {

@@ -47,7 +47,7 @@ namespace TicTacToe
             singleplayer_difficulty_control.BringToFront();
         }
 
-        public void LoadSingleplayer(SingleplayerDifficulty difficulty)
+        public void LoadSingleplayer(SingleplayerDifficulty difficulty, Player start_player)
         {
             singleplayer_control = new SingleplayerControl(difficulty);
 
@@ -55,6 +55,8 @@ namespace TicTacToe
             singleplayer_control.Dock = DockStyle.Fill;
             panelPlaceholder.Controls.Add(singleplayer_control);
             singleplayer_control.BringToFront();
+
+            ((SingleplayerControl)singleplayer_control).SetPlayer(start_player);
         }
 
         public void LoadMultiplayerLocal()
