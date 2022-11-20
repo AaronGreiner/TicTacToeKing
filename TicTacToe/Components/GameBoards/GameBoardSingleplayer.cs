@@ -9,7 +9,6 @@ namespace TicTacToe.Components.GameBoards
         internal override void ProcessMove()
         {
             Refresh();
-            //Thread.Sleep(100);
             com.DoMove(game);
             UpdateBoard(false);
         }

@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Collections.Specialized;
 using System.Drawing;
 using System.Linq;
 
@@ -14,7 +13,7 @@ namespace TicTacToe.Classes.Computer
         {
             Game virtual_game = new Game();
             virtual_game.Clone(game);
-            
+
             player = virtual_game.current_player;
 
             MinMax(virtual_game, 0);
