@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Drawing;
 using System.Linq;
 
@@ -11,20 +12,21 @@ namespace TicTacToe.Classes.Computer
 
         public Point Move(Game game)
         {
-            player = game.current_player;
+            Game virtual_game = new Game();
+            virtual_game.Clone(game);
+            
+            player = virtual_game.current_player;
 
-            MinMax(game, 0);
+            MinMax(virtual_game, 0);
 
             return best_pos;
         }
 
         private int GetGameScore(Game game, int depth)
         {
-            game.CheckGameState();
-
             if (game.current_state == GameState.WinLose)
             {
-                return (game.winning_player == player ? 10 : -10) - depth;
+                return game.winning_player == player ? (10 - depth) : (depth - 10);
             }
             else
             {
@@ -37,6 +39,8 @@ namespace TicTacToe.Classes.Computer
             Game virtual_game = new Game();
             virtual_game.Clone(game);
 
+            virtual_game.CheckGameState();
+
             if (virtual_game.current_state != GameState.Running)
             {
                 return GetGameScore(virtual_game, depth);
@@ -47,9 +51,14 @@ namespace TicTacToe.Classes.Computer
 
             foreach (Square square in virtual_game.GetAvailableSquares())
             {
-                virtual_game.UpdateSquare(square.pos, true);
+                Game temp_virtual_game = new Game();
+                temp_virtual_game.Clone(virtual_game);
 
-                scores.Add(MinMax(virtual_game, depth + 1));
+                temp_virtual_game.UpdateSquare(square.pos, true);
+                temp_virtual_game.CheckGameState();
+                temp_virtual_game.SwitchPlayer();
+
+                scores.Add(MinMax(temp_virtual_game, depth + 1));
                 moves.Add(square.pos);
             }
 
