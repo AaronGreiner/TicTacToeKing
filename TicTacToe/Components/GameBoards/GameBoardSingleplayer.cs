@@ -1,23 +1,22 @@
-﻿using System.Threading;
-using TicTacToe.Classes;
+﻿using TicTacToe.Classes.Computer;
 
 namespace TicTacToe.Components.GameBoards
 {
     public class GameBoardSingleplayer : GameBoard
     {
-        ComputerAI com;
+        Computer com;
 
         internal override void ProcessMove()
         {
             Refresh();
-            Thread.Sleep(100);
+            //Thread.Sleep(100);
             com.DoMove(game);
             UpdateBoard(false);
         }
 
         internal override void SetDifficulty(SingleplayerDifficulty difficulty)
         {
-            com = new ComputerAI(difficulty);
+            com = new Computer(difficulty);
         }
     }
 }

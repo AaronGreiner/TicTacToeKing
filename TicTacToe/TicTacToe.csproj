@@ -46,7 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\ComputerAI.cs" />
+    <Compile Include="Classes\Computer\ComMinMax.cs" />
+    <Compile Include="Classes\Computer\Computer.cs" />
+    <Compile Include="Classes\Computer\ComRandom.cs" />
     <Compile Include="Classes\Game.cs" />
     <Compile Include="Components\Controls\MultiplayerSocketControl.cs">
       <SubType>UserControl</SubType>

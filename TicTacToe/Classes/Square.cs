@@ -35,5 +35,12 @@ namespace TicTacToe.Classes
         {
             return owner == Player.Cross ? image_cross : image_circle;
         }
+
+        public void Clone(Square square_to_clone)
+        {
+            pos = square_to_clone.pos;
+            is_occupied = square_to_clone.is_occupied;
+            owner = square_to_clone.owner;
+        }
     }
 }
